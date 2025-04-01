@@ -34,7 +34,7 @@ function AiEditLeftPanel({ isOpen, onToggle, editor }) {
     }
     setLoading(true);
     try {
-      const response = await fetch('https://ai-website-builder-iyq0.onrender.com:3001/api/improve-text', {
+      const response = await fetch('https://ai-website-builder-iyq0.onrender.com/api/improve-text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: aiChanges, category: 'Health & Fitness' }),
