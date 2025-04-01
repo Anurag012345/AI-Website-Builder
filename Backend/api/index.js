@@ -16,6 +16,10 @@ app.use(express.json());
 // Mount API routes under /api
 app.use('/api', apiRoutes);
 
+app.get('/test', (req, res) => {
+    res.json({ message: 'Test route works!' });
+  });
+
 // Remove app.listen() for serverless functions
 // Instead, export the serverless handler
 export default serverless(app);
